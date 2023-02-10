@@ -21,7 +21,7 @@ namespace NexusFrameWorkTest
 
         protected override void Draw()
         {
-            SpriteBatch.DrawTexture(texture, Vector2.Zero, Color.White, 0, 1);
+            SpriteBatch.Draw(texture, Vector2.Zero, Color.White, 0, 1);
             SpriteBatch.DrawHitBox(hitBox, colro, false);
             base.Draw();
         }

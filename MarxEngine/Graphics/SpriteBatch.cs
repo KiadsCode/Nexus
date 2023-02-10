@@ -106,7 +106,7 @@ namespace Nexus.Framework.Graphics
             Gl.glEnd();
         }
         
-        public void DrawTexture(Texture2D texture, Vector2 position, Color color)
+        public void Draw(Texture2D texture, Vector2 position, Color color)
         {
             float x = position.X;
             float y = position.Y;
@@ -134,7 +134,7 @@ namespace Nexus.Framework.Graphics
             Gl.glDisable(Gl.GL_TEXTURE_2D);
             Gl.glDisable(Gl.GL_BLEND);
         }
-        public void DrawTexture(Texture2D texture, Vector2 position, Color color, float rotation)
+        public void Draw(Texture2D texture, Vector2 position, Color color, float rotation)
         {
             float x = position.X;
             float y = position.Y;
@@ -165,7 +165,7 @@ namespace Nexus.Framework.Graphics
             Gl.glDisable(Gl.GL_TEXTURE_2D);
             Gl.glDisable(Gl.GL_BLEND);
         }
-        public void DrawTexture(Texture2D texture, Vector2 position, Color color, float rotation, float scale)
+        public void Draw(Texture2D texture, Vector2 position, Color color, float rotation, float scale)
         {
             float x = position.X;
             float y = position.Y;
@@ -198,7 +198,7 @@ namespace Nexus.Framework.Graphics
             Gl.glDisable(Gl.GL_TEXTURE_2D);
             Gl.glDisable(Gl.GL_BLEND);
         }
-        public void DrawTexture(Texture2D texture, Vector2 position, Color color, float rotation, Vector2 scale)
+        public void Draw(Texture2D texture, Vector2 position, Color color, float rotation, Vector2 scale)
         {
             float x = position.X;
             float y = position.Y;
@@ -231,7 +231,7 @@ namespace Nexus.Framework.Graphics
             Gl.glDisable(Gl.GL_TEXTURE_2D);
             Gl.glDisable(Gl.GL_BLEND);
         }
-        public void DrawTexture(Texture2D texture, Vector2 position)
+        public void Draw(Texture2D texture, Vector2 position)
         {
             float x = position.X;
             float y = position.Y;

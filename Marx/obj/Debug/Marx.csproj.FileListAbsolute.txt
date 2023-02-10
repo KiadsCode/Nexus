@@ -1,0 +1,16 @@
+C:\Users\Acer\source\repos\Marx\Marx\obj\Debug\Marx.csproj.AssemblyReference.cache
+C:\Users\Acer\source\repos\Marx\Marx\obj\Debug\Marx.csproj.CoreCompileInputs.cache
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\freeglut.dll
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\Marx.exe
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\Marx.pdb
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\MarxEngine.dll
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\MarxEngine.pdb
+C:\Users\Acer\source\repos\Marx\Marx\obj\Debug\Marx.csproj.CopyComplete
+C:\Users\Acer\source\repos\Marx\Marx\obj\Debug\Marx.exe
+C:\Users\Acer\source\repos\Marx\Marx\obj\Debug\Marx.pdb
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\Tao.FreeGlut.dll
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\Tao.OpenGl.dll
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\Tao.FreeGlut.xml
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\Tao.OpenGl.xml
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\Marx.exe.config
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\USA.bmp

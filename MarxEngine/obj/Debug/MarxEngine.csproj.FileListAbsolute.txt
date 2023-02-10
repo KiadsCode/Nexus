@@ -1,0 +1,13 @@
+C:\Users\Acer\source\repos\Marx\MarxEngine\obj\Debug\MarxEngine.csproj.AssemblyReference.cache
+C:\Users\Acer\source\repos\Marx\MarxEngine\obj\Debug\MarxEngine.csproj.CoreCompileInputs.cache
+C:\Users\Acer\source\repos\Marx\MarxEngine\bin\Debug\freeglut.dll
+C:\Users\Acer\source\repos\Marx\MarxEngine\bin\Debug\MarxEngine.dll
+C:\Users\Acer\source\repos\Marx\MarxEngine\bin\Debug\MarxEngine.pdb
+C:\Users\Acer\source\repos\Marx\MarxEngine\obj\Debug\MarxEngine.dll
+C:\Users\Acer\source\repos\Marx\MarxEngine\obj\Debug\MarxEngine.pdb
+C:\Users\Acer\source\repos\Marx\MarxEngine\bin\Debug\USA.bmp
+C:\Users\Acer\source\repos\Marx\MarxEngine\bin\Debug\OpenTK.dll
+C:\Users\Acer\source\repos\Marx\MarxEngine\bin\Debug\OpenTK.pdb
+C:\Users\Acer\source\repos\Marx\MarxEngine\bin\Debug\OpenTK.xml
+C:\Users\Acer\source\repos\Marx\MarxEngine\bin\Debug\OpenTK.dll.config
+C:\Users\Acer\source\repos\Marx\MarxEngine\obj\Debug\MarxEngine.csproj.CopyComplete

@@ -1,0 +1,17 @@
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\freeglut.dll
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\NexusFrameWorkTest.exe.config
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\NexusFrameWorkTest.exe
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\NexusFrameWorkTest.pdb
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\Nexus.dll
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\Tao.FreeGlut.dll
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\Tao.OpenGl.dll
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\Nexus.pdb
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\Tao.FreeGlut.xml
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\Tao.OpenGl.xml
+C:\Users\Acer\source\repos\Marx\Marx\obj\Debug\NexusFrameWorkTest.csproj.AssemblyReference.cache
+C:\Users\Acer\source\repos\Marx\Marx\obj\Debug\NexusFrameWorkTest.csproj.CoreCompileInputs.cache
+C:\Users\Acer\source\repos\Marx\Marx\obj\Debug\NexusFrameWorkTest.csproj.CopyComplete
+C:\Users\Acer\source\repos\Marx\Marx\obj\Debug\NexusFrameWorkTest.exe
+C:\Users\Acer\source\repos\Marx\Marx\obj\Debug\NexusFrameWorkTest.pdb
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\Content\typeSnd.wav
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\Content\USA.bmp

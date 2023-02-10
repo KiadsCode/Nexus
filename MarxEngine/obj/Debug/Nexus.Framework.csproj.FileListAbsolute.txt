@@ -1,0 +1,7 @@
+C:\Users\Acer\source\repos\Marx\MarxEngine\bin\Debug\freeglut.dll
+C:\Users\Acer\source\repos\Marx\MarxEngine\bin\Debug\Nexus.dll
+C:\Users\Acer\source\repos\Marx\MarxEngine\bin\Debug\Nexus.pdb
+C:\Users\Acer\source\repos\Marx\MarxEngine\obj\Debug\Nexus.Framework.csproj.AssemblyReference.cache
+C:\Users\Acer\source\repos\Marx\MarxEngine\obj\Debug\Nexus.Framework.csproj.CoreCompileInputs.cache
+C:\Users\Acer\source\repos\Marx\MarxEngine\obj\Debug\Nexus.dll
+C:\Users\Acer\source\repos\Marx\MarxEngine\obj\Debug\Nexus.pdb

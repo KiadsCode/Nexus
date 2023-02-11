@@ -73,6 +73,8 @@
     <Compile Include="Audio\Win32SoundPlayer.cs" />
     <Compile Include="Content\ContentManager.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="GameComponent.cs" />
+    <Compile Include="GameComponentsCollection.cs" />
     <Compile Include="Graphics\Color.cs" />
     <Compile Include="Graphics\SpriteBatch.cs" />
     <Compile Include="Graphics\Texture2D.cs" />

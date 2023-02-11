@@ -1,25 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Tao.OpenGl;
-using Tao.FreeGlut;
-using Tao.Platform.Windows;
-using Tao.Platform;
+﻿using Nexus.Framework.Content;
 using Nexus.Framework.Graphics;
-using Nexus.Framework.Content;
+using Tao.FreeGlut;
+using Tao.OpenGl;
 
 namespace Nexus.Framework
 {
     public class Game
     {
-        private ContentManager _contentManager;
-        private bool _isContentLoaded = false;
-        private int _windowValuePtr = 0;
-        private SpriteBatch _spriteBatch;
-        private bool _isRunning = false;
-        private string _title = "Nexus framework Window";
+        private bool _isContentLoaded;
+        private bool _isRunning;
+        private string _title = "Nexus SimpleSample";
         private int _positionX = 100;
         private int _positionY = 100;
         private int _width = 800;
@@ -28,86 +18,71 @@ namespace Nexus.Framework
         private int _prevWidth = 800;
         private int _prevHeight = 480;
         private Color _backGroundColor = Color.CornflowerBlue;
-        public SpriteBatch SpriteBatch
-        {
-            get
-            {
-                return _spriteBatch;
-            }
-        }
+        public SpriteBatch SpriteBatch { get; private set; }
+
         public string Title
         {
-            get
-            {
-                return _title;
-            }
+            get => _title;
             protected set
             {
                 _title = value;
                 Glut.glutSetWindowTitle(value);
             }
         }
+
         public int Width
         {
-            get
-            {
-                return _width;
-            }
+            get => _width;
             protected set
             {
                 _width = value;
                 Glut.glutReshapeWindow(value, _height);
             }
         }
+
         public int X
         {
-            get
-            {
-                return _positionX;
-            }
+            get => _positionX;
             protected set
             {
                 _positionX = value;
                 Glut.glutPositionWindow(value, _positionY);
             }
         }
+
         public int Y
         {
-            get
-            {
-                return _positionY;
-            }
+            get => _positionY;
             protected set
             {
                 _positionY = value;
                 Glut.glutPositionWindow(_positionX, value);
             }
         }
+
         public int Height
         {
-            get
-            {
-                return _height;
-            }
+            get => _height;
             protected set
             {
                 _height = value;
                 Glut.glutReshapeWindow(_width, value);
             }
         }
+
         public Color BackGroundColor
         {
-            get
-            {
-                return _backGroundColor;
-            }
-            protected set
-            {
-                _backGroundColor = value;
-            }
+            get => _backGroundColor;
+            protected set => _backGroundColor = value;
         }
 
-        public ContentManager Content { get { return _contentManager; } }
+        /// <summary>
+        ///     Allows user to load game assets
+        ///     like textures and sounds
+        /// </summary>
+        public ContentManager Content { get; private set; }
+
+        public GameComponentsCollection Components { get; private set; }
 
         public void Run()
         {
@@ -117,7 +92,7 @@ namespace Nexus.Framework
                 Glut.glutInitDisplayMode(Glut.GLUT_RGB | Glut.GLUT_SINGLE);
                 Glut.glutInitWindowPosition(100, 100);
                 Glut.glutInitWindowSize(800, 480);
-                _windowValuePtr = Glut.glutCreateWindow(_title);
+                Glut.glutCreateWindow(_title);
                 Glut.glutDisplayFunc(PrivateDraw);
                 Glut.glutIdleFunc(IdleFunction);
                 Glut.glutReshapeFunc(PrivateReshape);
@@ -130,7 +105,7 @@ namespace Nexus.Framework
         protected void ToggleFullscreen()
         {
             _fullScreen = !_fullScreen;
-            if(_fullScreen)
+            if (_fullScreen)
             {
                 _fullScreen = true;
                 _prevWidth = _width;
@@ -146,17 +121,24 @@ namespace Nexus.Framework
 
         private void ComponentsInitialize()
         {
-            _contentManager = new ContentManager();
-            _spriteBatch = new SpriteBatch(this);
+            Content = new ContentManager();
+            SpriteBatch = new SpriteBatch(this);
+            Components = new GameComponentsCollection();
             LoadContent();
         }
 
         private void PrivateReshape(int width, int height)
         {
             Gl.glViewport(0, 0, width, height);
+            OrthographicCamSet(width, height);
             _width = width;
             _height = height;
-            _spriteBatch = new SpriteBatch(this);
+            SpriteBatch = new SpriteBatch(this);
+        }
+
+        private void OrthographicCamSet(int width, int height)
+        {
+            Glu.gluOrtho2D(0, width, height, 0);
         }
 
         private void IdleFunction()
@@ -172,8 +154,8 @@ namespace Nexus.Framework
             Gl.glPushMatrix();
             if (_isContentLoaded)
                 Draw();
-            Gl.glPopMatrix(); 
-            Gl.glFlush();
+            Gl.glPopMatrix();
+            Glut.glutSwapBuffers();
             EndDraw();
         }
 
@@ -192,9 +174,14 @@ namespace Nexus.Framework
 
         protected virtual void EndDraw()
         {
+            Glut.glutPostRedisplay();
         }
+
         protected virtual void Initialize()
         {
+            Gl.glMatrixMode(Gl.GL_PROJECTION);
+            Gl.glLoadIdentity();
+            OrthographicCamSet(Width, Height);
             ComponentsInitialize();
         }
 
@@ -215,12 +202,14 @@ namespace Nexus.Framework
 
         protected virtual void UnloadContent()
         {
-            _contentManager.Unload();
+            Content.Unload();
         }
 
         protected virtual void Update()
         {
-            Glut.glutPostRedisplay();
+            foreach (GameComponent component in Components)
+                if (component.Enabled)
+                    component.Update();
         }
     }
 }

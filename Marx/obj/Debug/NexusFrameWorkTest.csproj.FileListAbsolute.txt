@@ -14,4 +14,4 @@ C:\Users\Acer\source\repos\Marx\Marx\obj\Debug\NexusFrameWorkTest.csproj.CopyCom
 C:\Users\Acer\source\repos\Marx\Marx\obj\Debug\NexusFrameWorkTest.exe
 C:\Users\Acer\source\repos\Marx\Marx\obj\Debug\NexusFrameWorkTest.pdb
 C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\Content\typeSnd.wav
-C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\Content\USA.bmp
+C:\Users\Acer\source\repos\Marx\Marx\bin\Debug\Content\illuminati.png

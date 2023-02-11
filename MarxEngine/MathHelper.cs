@@ -6,7 +6,7 @@ namespace Nexus.Framework
     {
         public static float Lerp(float a, float b, float k)
         {
-            float result = a * (1 - k) + b * k;
+            var result = a * (1 - k) + b * k;
 
             if (result >= b)
                 result = b;
@@ -15,56 +15,60 @@ namespace Nexus.Framework
 
             return result;
         }
+
         public static double DLengthBetweenPoint2D(Vector2 a, Vector2 b)
         {
-            double result = Math.Sqrt(Math.Pow(b.X - a.X, 2) + Math.Pow(b.Y - a.Y, 2));
+            var result = Math.Sqrt(Math.Pow(b.X - a.X, 2) + Math.Pow(b.Y - a.Y, 2));
             return result;
         }
+
         public static float FLengthBetweenPoint2D(Vector2 a, Vector2 b)
         {
-            double rawResult = Math.Sqrt(Math.Pow(b.X - a.X, 2) + Math.Pow(b.Y - a.Y, 2));
-            float result = Convert.ToSingle(rawResult);
+            var rawResult = Math.Sqrt(Math.Pow(b.X - a.X, 2) + Math.Pow(b.Y - a.Y, 2));
+            var result = Convert.ToSingle(rawResult);
             return result;
         }
+
         public static int ILengthBetweenPoint2D(Vector2 a, Vector2 b)
         {
-            double rawResult = Math.Sqrt(Math.Pow(b.X - a.X, 2) + Math.Pow(b.Y - a.Y, 2));
-            int result = Convert.ToInt32(rawResult);
+            var rawResult = Math.Sqrt(Math.Pow(b.X - a.X, 2) + Math.Pow(b.Y - a.Y, 2));
+            var result = Convert.ToInt32(rawResult);
             return result;
         }
 
         public static int ILengthBetweenPoint1D(int a, int b)
         {
-            double rawResult = Math.Sqrt(Math.Pow(b - a, 2));
-            int result = Convert.ToInt32(rawResult);
+            var rawResult = Math.Sqrt(Math.Pow(b - a, 2));
+            var result = Convert.ToInt32(rawResult);
             return result;
         }
+
         public static float FLengthBetweenPoint1D(int a, int b)
         {
-            double rawResult = Math.Sqrt(Math.Pow(b - a, 2));
-            float result = Convert.ToSingle(rawResult);
+            var rawResult = Math.Sqrt(Math.Pow(b - a, 2));
+            var result = Convert.ToSingle(rawResult);
             return result;
         }
+
         public static double DLengthBetweenPoint1D(int a, int b)
         {
-            double result = Math.Sqrt(Math.Pow(b - a, 2));
+            var result = Math.Sqrt(Math.Pow(b - a, 2));
             return result;
         }
+
         public static float Clamp(float value, float min, float max)
         {
-            bool flag = value < min;
+            var flag = value < min;
             if (flag)
             {
                 value = min;
             }
             else
             {
-                bool flag2 = value > max;
-                if (flag2)
-                {
-                    value = max;
-                }
+                var flag2 = value > max;
+                if (flag2) value = max;
             }
+
             return value;
         }
 
@@ -75,7 +79,7 @@ namespace Nexus.Framework
 
         public static float MoveTowards(float current, float target, float maxDelta)
         {
-            bool flag = Math.Abs(target - current) <= maxDelta;
+            var flag = Math.Abs(target - current) <= maxDelta;
             float result;
             if (flag)
                 result = target;

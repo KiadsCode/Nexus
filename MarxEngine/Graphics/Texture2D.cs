@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.IO;
-using System.Drawing.Imaging;
+﻿#region Copyright
+/*
+ * Copyright KiadsCode
+ * Nexus framework engine v1.3.6
+ */
+#endregion
 using Tao.OpenGl;
 
 namespace Nexus.Framework.Graphics
@@ -12,9 +11,9 @@ namespace Nexus.Framework.Graphics
     public class Texture2D
     {
         private int _id;
-        public int ID { get { return _id; } }
-        public int Height { get; private set; }
-        public int Width { get; private set; }
+        public int ID => _id;
+        public int Height { get; }
+        public int Width { get; }
 
         public Texture2D(int id, int height, int width)
         {

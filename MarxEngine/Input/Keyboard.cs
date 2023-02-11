@@ -1,23 +1,20 @@
-﻿/*
- * Создано в SharpDevelop.
- * Пользователь: Acer
- * Дата: 07.02.2023
- * Время: 14:33
- * 
- * Для изменения этого шаблона используйте меню "Инструменты | Параметры | Кодирование | Стандартные заголовки".
+﻿#region Copyright
+/*
+ * Copyright KiadsCode
+ * Nexus framework engine v1.3.6
  */
-using System;
+#endregion
 
 namespace Nexus.Framework.Input
 {
 	/// <summary>
-	/// Description of Keyboard.
+	///     Description of Keyboard.
 	/// </summary>
 	public static class Keyboard
-	{
-		public static KeyboardState GetState()
-		{
-			return new KeyboardState(0);
-		}
-	}
+    {
+        public static KeyboardState GetState()
+        {
+            return new KeyboardState(0);
+        }
+    }
 }

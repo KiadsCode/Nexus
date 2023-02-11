@@ -167,14 +167,6 @@ namespace Nexus.Framework.Audio
 
         private static readonly object EventStreamChanged = new object();
 
-        //
-        // Сводка:
-        //     Возвращает или задает время в миллисекундах, за которое должен быть загружен
-        //     WAV-файл.
-        //
-        // Возврат:
-        //     Время ожидания в миллисекундах. По умолчанию используется значение 10000 (10
-        //     секунд).
         public int LoadTimeout
         {
             get

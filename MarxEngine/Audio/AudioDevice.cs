@@ -1,60 +1,50 @@
-﻿using System;
-
-namespace Nexus.Framework.Audio
+﻿namespace Nexus.Framework.Audio
 {
-	internal class AudioDevice
-	{
-		private static AudioDevice TryAlsa(string name)
-		{
-			AudioDevice result;
-			try
-			{
-				result = new AlsaDevice(name);
-			}
-			catch
-			{
-				result = null;
-			}
-			return result;
-		}
+    internal class AudioDevice
+    {
+        private static AudioDevice TryAlsa(string name)
+        {
+            AudioDevice result;
+            try
+            {
+                result = new AlsaDevice(name);
+            }
+            catch
+            {
+                result = null;
+            }
 
-		public static AudioDevice CreateDevice(string name)
-		{
-			AudioDevice audioDevice = AudioDevice.TryAlsa(name);
-			if (audioDevice == null)
-			{
-				audioDevice = new AudioDevice();
-			}
-			return audioDevice;
-		}
+            return result;
+        }
 
-		public virtual bool SetFormat(AudioFormat format, int channels, int rate)
-		{
-			return true;
-		}
+        public static AudioDevice CreateDevice(string name)
+        {
+            var audioDevice = TryAlsa(name);
+            if (audioDevice == null) audioDevice = new AudioDevice();
+            return audioDevice;
+        }
 
-		public virtual int PlaySample(byte[] buffer, int num_frames)
-		{
-			return num_frames;
-		}
+        public virtual bool SetFormat(AudioFormat format, int channels, int rate)
+        {
+            return true;
+        }
 
-		public virtual int XRunRecovery(int err)
-		{
-			return err;
-		}
+        public virtual int PlaySample(byte[] buffer, int num_frames)
+        {
+            return num_frames;
+        }
 
-		public virtual void Wait()
-		{
-		}
+        public virtual int XRunRecovery(int err)
+        {
+            return err;
+        }
 
-		public uint ChunkSize
-		{
-			get
-			{
-				return this.chunk_size;
-			}
-		}
+        public virtual void Wait()
+        {
+        }
 
-		protected uint chunk_size;
-	}
+        public uint ChunkSize => chunk_size;
+
+        protected uint chunk_size;
+    }
 }

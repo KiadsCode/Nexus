@@ -6,29 +6,32 @@
  * 
  * Для изменения этого шаблона используйте меню "Инструменты | Параметры | Кодирование | Стандартные заголовки".
  */
+
 using System;
 using System.IO;
 
 namespace Nexus.Framework.Audio
 {
-	internal class SystemSound
-	{
-		internal SystemSound(string tag)
-		{
-			this.resource = typeof(SystemSound).Assembly.GetManifestResourceStream(tag + ".wav");
-		}
+    internal class SystemSound
+    {
+        internal SystemSound(string tag)
+        {
+            resource = typeof(SystemSound).Assembly.GetManifestResourceStream(tag + ".wav");
+        }
 
-		public void Play()
-		{
-			using (NativeSound sound = new NativeSound(this.resource))
-				sound.Play();
-		}
+        public void Play()
+        {
+            using (var sound = new NativeSound(resource))
+            {
+                sound.Play();
+            }
+        }
 
-		internal SystemSound()
-		{
-			throw new Exception("NotSupportedException");
-		}
+        internal SystemSound()
+        {
+            throw new Exception("NotSupportedException");
+        }
 
-		private Stream resource;
-	}
+        private readonly Stream resource;
+    }
 }

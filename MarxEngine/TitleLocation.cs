@@ -11,21 +11,16 @@ namespace Nexus.Framework
         {
             get
             {
-                if (TitleLocation._titleLocation == null)
+                if (_titleLocation == null)
                 {
-                    string titleLocation = string.Empty;
-                    Assembly assembly = Assembly.GetEntryAssembly();
-                    if (assembly == null)
-                    {
-                        assembly = Assembly.GetCallingAssembly();
-                    }
-                    if (assembly != null)
-                    {
-                        titleLocation = Path.GetDirectoryName(assembly.Location);
-                    }
-                    TitleLocation._titleLocation = titleLocation;
+                    var titleLocation = string.Empty;
+                    var assembly = Assembly.GetEntryAssembly();
+                    if (assembly == null) assembly = Assembly.GetCallingAssembly();
+                    if (assembly != null) titleLocation = Path.GetDirectoryName(assembly.Location);
+                    _titleLocation = titleLocation;
                 }
-                return TitleLocation._titleLocation;
+
+                return _titleLocation;
             }
         }
     }

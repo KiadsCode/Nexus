@@ -1,37 +1,22 @@
-﻿using System;
-
-namespace Nexus.Framework.Audio
+﻿namespace Nexus.Framework.Audio
 {
-	internal abstract class AudioData
-	{
-		public abstract int Channels { get; }
+    internal abstract class AudioData
+    {
+        public abstract int Channels { get; }
 
-		public abstract int Rate { get; }
+        public abstract int Rate { get; }
 
-		public abstract AudioFormat Format { get; }
+        public abstract AudioFormat Format { get; }
 
-		public virtual void Setup(AudioDevice dev)
-		{
-			dev.SetFormat(this.Format, this.Channels, this.Rate);
-		}
+        public virtual void Setup(AudioDevice dev)
+        {
+            dev.SetFormat(Format, Channels, Rate);
+        }
 
-		public abstract void Play(AudioDevice dev);
+        public abstract void Play(AudioDevice dev);
 
-		public virtual bool IsStopped
-		{
-			get
-			{
-				return this.stopped;
-			}
-			set
-			{
-				this.stopped = value;
-			}
-		}
+        public virtual bool IsStopped { get; set; }
 
-		protected const int buffer_size = 4096;
-
-		private bool stopped;
-	}
+        protected const int buffer_size = 4096;
+    }
 }
-

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
 
 namespace Nexus.Framework
 {
@@ -12,8 +9,9 @@ namespace Nexus.Framework
         public static extern IntPtr GetDesktopWindow();
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, ThrowOnUnmappableChar = true, BestFitMapping = false)]
-        public static extern IntPtr FindWindow([MarshalAs(UnmanagedType.LPTStr)] String atom, [MarshalAs(UnmanagedType.LPTStr)] String title);
-        
+        public static extern IntPtr FindWindow([MarshalAs(UnmanagedType.LPTStr)] string atom,
+            [MarshalAs(UnmanagedType.LPTStr)] string title);
+
         [DllImport("user32.dll", ExactSpelling = true)]
         public static extern bool GetAsyncKeyState(int vkey);
 
@@ -25,16 +23,17 @@ namespace Nexus.Framework
 
         public static int GetPositionX(int windowPosX)
         {
-            int pos = 0;
+            var pos = 0;
             POINT p;
             if (GetCursorPos(out p))
                 pos = p.x;
             pos -= windowPosX;
             return pos;
         }
+
         public static int GetPositionY(int windowPosY)
         {
-            int pos = 0;
+            var pos = 0;
             POINT p;
             if (GetCursorPos(out p))
                 pos = p.y;

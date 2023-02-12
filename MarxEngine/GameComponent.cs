@@ -2,7 +2,7 @@
 {
     public class GameComponent
     {
-        public bool Enabled { get; protected set; } = true;
+        public bool Enabled { get; set; } = true;
 
         public Game Game { get; }
 

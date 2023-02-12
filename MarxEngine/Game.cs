@@ -185,7 +185,7 @@ namespace Nexus.Framework
             ComponentsInitialize();
         }
 
-        protected virtual void Exit()
+        protected void Exit()
         {
             if (_isRunning)
             {
@@ -203,6 +203,7 @@ namespace Nexus.Framework
         protected virtual void UnloadContent()
         {
             Content.Unload();
+            Components.Clear();
         }
 
         protected virtual void Update()

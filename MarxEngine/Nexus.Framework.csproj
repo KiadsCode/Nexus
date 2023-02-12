@@ -79,12 +79,33 @@
     <Compile Include="Graphics\SpriteBatch.cs" />
     <Compile Include="Graphics\Texture2D.cs" />
     <Compile Include="HitBox.cs" />
+    <Compile Include="Input\Buttons.cs" />
+    <Compile Include="Input\ButtonState.cs" />
+    <Compile Include="Input\ButtonValues.cs" />
+    <Compile Include="Input\ErrorCodes.cs" />
+    <Compile Include="Input\GamePad.cs" />
+    <Compile Include="Input\GamePadButtons.cs" />
+    <Compile Include="Input\GamePadCapabilities.cs" />
+    <Compile Include="Input\GamePadDeadZone.cs" />
+    <Compile Include="Input\GamePadDeadZoneUtils.cs" />
+    <Compile Include="Input\GamePadDPad.cs" />
+    <Compile Include="Input\GamePadState.cs" />
+    <Compile Include="Input\GamePadThumbSticks.cs" />
+    <Compile Include="Input\GamePadTriggers.cs" />
+    <Compile Include="Input\GamePadType.cs" />
+    <Compile Include="Input\Helper.cs" />
     <Compile Include="Input\Keyboard.cs" />
     <Compile Include="Input\KeyboardState.cs" />
     <Compile Include="Input\Keys.cs" />
     <Compile Include="Input\Mouse.cs" />
     <Compile Include="Input\MouseButtons.cs" />
     <Compile Include="Input\MouseState.cs" />
+    <Compile Include="Input\PlayerIndex.cs" />
+    <Compile Include="Input\XINPUT_CAPABILITIES.cs" />
+    <Compile Include="Input\XINPUT_GAMEPAD.cs" />
+    <Compile Include="Input\XINPUT_NATIVES.cs" />
+    <Compile Include="Input\XINPUT_STATE.cs" />
+    <Compile Include="Input\XINPUT_VIBRATION.cs" />
     <Compile Include="MathHelper.cs" />
     <Compile Include="NativeMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,6 +119,5 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -84,5 +84,20 @@ namespace Nexus.Framework
         }
 
         #endregion
+
+        public static Vector2 Max(Vector2 value1, Vector2 value2)
+        {
+            Vector2 result = Vector2.Zero;
+            result.X = ((value1.X > value2.X) ? value1.X : value2.X);
+            result.Y = ((value1.Y > value2.Y) ? value1.Y : value2.Y);
+            return result;
+        }
+        public static Vector2 Min(Vector2 value1, Vector2 value2)
+        {
+            Vector2 result = Vector2.Zero;
+            result.X = ((value1.X < value2.X) ? value1.X : value2.X);
+            result.Y = ((value1.Y < value2.Y) ? value1.Y : value2.Y);
+            return result;
+        }
     }
 }

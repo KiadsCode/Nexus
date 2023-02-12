@@ -3,7 +3,7 @@
 namespace Nexus.Framework.Input
 {
 	/// <summary>
-	///     Description of KeyboardState.
+	///     Provides Input of keyboard
 	/// </summary>
 	public struct KeyboardState : IEquatable<KeyboardState>
     {
@@ -237,9 +237,9 @@ namespace Nexus.Framework.Input
                     return Plus;
                 case Keys.Minus:
                     return Minus;
+                default:
+                    return false;
             }
-
-            return false;
         }
 
         public bool IsKeyUp(Keys key)

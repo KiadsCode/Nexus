@@ -1,4 +1,5 @@
 ﻿using Nexus.Framework;
+using Nexus.Framework.Audio;
 using Nexus.Framework.Graphics;
 using Nexus.Framework.Input;
 
@@ -8,6 +9,7 @@ namespace NexusFrameWorkTest
     {
         private Player _player;
         private Texture2D _textureB;
+        private WavSound _sound;
 
         protected override void Draw()
         {
@@ -20,13 +22,15 @@ namespace NexusFrameWorkTest
         {
             Content.RootDirectory = "Content";
             _textureB = Content.Load<Texture2D>(@"illuminati.png");
+            _sound = Content.Load<WavSound>(@"typeSnd.wav");
+            _sound.IsLooped = false;
             _player = new Player(_textureB, this);
             Components.Add(_player);
             base.LoadContent();
         }
 
-        private KeyboardState[] _keyboardStates = new KeyboardState[2];
-        
+        private readonly KeyboardState[] _keyboardStates = new KeyboardState[2];
+
         protected override void Update()
         {
             _keyboardStates[0] = Keyboard.GetState();
@@ -34,6 +38,8 @@ namespace NexusFrameWorkTest
                 ToggleFullscreen();
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+            if(_keyboardStates[0].IsKeyDown(Keys.V) && _keyboardStates[1].IsKeyUp(Keys.V))
+                _sound.Play();
             _keyboardStates[1] = Keyboard.GetState();
             base.Update();
         }

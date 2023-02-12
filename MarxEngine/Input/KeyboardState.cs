@@ -64,7 +64,8 @@ namespace Nexus.Framework.Input
 
         private static bool GetAsyncKeyState(int value)
         {
-            return NativeMethods.GetAsyncKeyState(value);
+            short keyValue = NativeMethods.GetAsyncKeyState(value);
+            return Convert.ToBoolean(keyValue);
         }
 
         internal KeyboardState(int placeHolder)

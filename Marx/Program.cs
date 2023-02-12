@@ -38,7 +38,7 @@ namespace NexusFrameWorkTest
                 ToggleFullscreen();
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-            if(_keyboardStates[0].IsKeyDown(Keys.V) && _keyboardStates[1].IsKeyUp(Keys.V))
+            if (_keyboardStates[0].IsKeyDown(Keys.V) && _keyboardStates[1].IsKeyUp(Keys.V))
                 _sound.Play();
             _keyboardStates[1] = Keyboard.GetState();
             base.Update();

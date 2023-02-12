@@ -13,7 +13,7 @@ namespace Nexus.Framework
             [MarshalAs(UnmanagedType.LPTStr)] string title);
 
         [DllImport("user32.dll", ExactSpelling = true)]
-        public static extern bool GetAsyncKeyState(int vkey);
+        public static extern short GetAsyncKeyState(int vkey);
 
         [DllImport("user32.dll")]
         public static extern bool GetCursorPos(out POINT point);
